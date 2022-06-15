@@ -1,21 +1,26 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--  Add Icon-->
+  <!--  <link rel="icon" type="image/x-icon" href="change this to your path">-->
 
-  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">  <!-- ubah path jika tidak muncul-->
-  <link rel="stylesheet" type="text/css" href="{% static 'css/maincons.css' %}">   <!-- ubah path jika tidak muncul-->
-  <link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}"> <!-- ubah path jika tidak muncul-->
-  <link rel="stylesheet" type="text/css" href="{% static 'css/theme.css' %}">      <!-- ubah path jika tidak muncul-->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}"> <!-- ubah path jika tidak muncul-->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/maincons.css' %}"> <!-- ubah path jika tidak muncul-->
+  <link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+  <!-- ubah path jika tidak muncul-->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/theme.css' %}"> <!-- ubah path jika tidak muncul-->
 
 
 
   <title>Home | Parking Space Counter</title>
 
 </head>
+
 <body>
 
   <!-- Scroll Ke Atas -->
@@ -27,7 +32,8 @@
       <div class="container">
         <a href="index.html" class="navbar-brand">Parking Space <span class="text-primary">Counter</span></a>
 
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent"
+          aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -37,13 +43,13 @@
               <a class="nav-link" href="{% url 'home' %}">Home</a>
             </li>
             <li class="nav-item">
-              <li class="scroll-to-section"><a href="#search">Location</a></li>
+            <li class="scroll-to-section"><a href="#search">Location</a></li>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="{% url 'about' %}">About Us</a>
             </li>
             <li class="nav-item">
-              <li class="scroll-to-section"><a href="#contact">Contact</a></li>
+            <li class="scroll-to-section"><a href="#contact">Contact</a></li>
             </li>
           </ul>
         </div>
@@ -57,7 +63,8 @@
           <div class="col-md-6 py-5 wow fadeInLeft">
             <h1 class="mb-4">Cari Tempat Parkir yang Kamu Mau di Parkir Space Counter</h1>
             <p class="text-lg text-grey mb-5">Nikmati kemudahan dalam mencari dan memilih tempat parkir di sini</p>
-            <a href="#parking-banner" class="btn btn-primary btn-split">Cari Slot Parkir<div class="fab"><span class="mai-search"></span></div></a>
+            <a href="#parking-banner" class="btn btn-primary btn-split">Cari Slot Parkir<div class="fab"><span
+                  class="mai-search"></span></div></a>
           </div>
         </div>
         <a href="#search" class="btn-scroll" data-role="smoothscroll"><span class="mai-arrow-down"></span></a>
@@ -124,17 +131,21 @@
       <div class="row justify-content-center align-items-center h-100">
         <div class="col-md-6 py-5 justify-content-center">
           <!-- Disini nanti program py nya buat nampilin parkirannya, sementara gambar dulu -->
-          <img src="{% static 'img/parking.png' %}" alt="Parkir" width="540x" style="object-position: center; filter: brightness(70%); border-radius: 20px;">
-          <h1 class="text-center"><a href="#us" class="nav-link" data-role="smoothscroll" style="font-weight: bold; color: #645f88;">Supermarket A</a></h1>
+          <img src="{% static 'img/parking.png' %}" alt="Parkir" width="540x"
+            style="object-position: center; filter: brightness(70%); border-radius: 20px;">
+          <h1 class="text-center"><a href="#us" class="nav-link" data-role="smoothscroll"
+              style="font-weight: bold; color: #645f88;">Supermarket A</a></h1>
           <!-- django pakai form-->
           <form action="/external/" method="post">
-          <div class="body text-center">
-            {% csrf_token %}
-            <p>Sabtu, 28 Mei 2022</p>
-            {{data_external}}
-            {{data1}}
-            <button type="submit" class="btn btn-primary btn-split" name="param" required>Parking Cam<div class="fab"><span class="mai-search"></span></div></button>
-          </div>
+            <div class="body text-center">
+              {% csrf_token %}
+              <p>Sabtu, 28 Mei 2022</p>
+              {{data_external}}
+              {{data1}}
+              <button type="submit" class="btn btn-primary btn-split" name="param" required>Parking Cam<div class="fab">
+                  <span class="mai-search"></span>
+                </div></button>
+            </div>
           </form>
         </div>
       </div>
@@ -149,7 +160,7 @@
         <div class="col-lg-9 align-self-center">
           <div class="row">
             <div class="col-lg-12">
-              <form id="contact" action="" method="post">
+              <form id="contact">
                 <div class="row">
                   <div class="col-lg-12">
                     <h2>CUSTOMER CARE</h2>
@@ -161,8 +172,9 @@
                   </div>
                   <div class="col-lg-4">
                     <fieldset>
-                    <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL" required="">
-                  </fieldset>
+                      <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL"
+                        required="">
+                    </fieldset>
                   </div>
                   <div class="col-lg-4">
                     <fieldset>
@@ -171,12 +183,13 @@
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
-                      <textarea name="message" type="text" class="form-control" id="message" placeholder="YOUR MESSAGE" required=""></textarea>
+                      <textarea name="message" type="text" class="form-control" id="message" placeholder="YOUR MESSAGE"
+                        required=""></textarea>
                     </fieldset>
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
-                      <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
+                      <button type="button" id="form-submit" class="button">SEND MESSAGE NOW</button>
                     </fieldset>
                   </div>
                 </div>
@@ -211,8 +224,10 @@
 
     <!-- COPYRIGHT -->
     <div class="footer">
-      <p>Copyright © 2022 PARKING SPACE COUNTER CO., LTD. ALL RIGHTS RESERVED. 
-          <br>Design: <a href="https://www.figma.com/file/2mwBkWkcX9dDGBDnQRNC92/Untitled?node-id=0%3A1">PARKING SPACE COUNTER</a></p>
+      <p>Copyright © 2022 PARKING SPACE COUNTER CO., LTD. ALL RIGHTS RESERVED.
+        <br>Design: <a href="https://www.figma.com/file/2mwBkWkcX9dDGBDnQRNC92/Untitled?node-id=0%3A1">PARKING SPACE
+          COUNTER</a>
+      </p>
     </div>
   </section>
 
@@ -220,6 +235,7 @@
   <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
   <script src="{% static 'vendor/wow/wow.min.js' %}"></script>
   <script src="{% static 'js/theme.js' %}"></script>
-  
+
 </body>
+
 </html>
