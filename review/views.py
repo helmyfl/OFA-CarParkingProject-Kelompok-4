@@ -14,7 +14,7 @@ def about(request):
 
 def external(request):
     inp = request.POST.get('param')
-    out = run([sys.executable, 'D:\KULIAH\MAGANG\PA FIXXXXXXXXXXXXX\CarParkProject\main.py', inp], shell=False,
+    out = run([sys.executable, 'C:\django\review\CarParkProject\main.py', inp], shell=False,
               stdout=PIPE)
     print(out)
 
