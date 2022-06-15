@@ -29,7 +29,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['127.0.0.1','ofa-car-park-project.herokuapp.com']
 
 """
-To run in your local apply this to code above
+To run in your local paste code below to the code above
 DEBUG = True
 
 ALLOWED_HOSTS = []
